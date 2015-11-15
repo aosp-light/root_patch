@@ -315,10 +315,10 @@ static void btif_task(UINT32 params)
             if (btif_fm_state == BTIF_CORE_STATE_ENABLING)
             {
 #if (defined(HCILP_INCLUDED) && HCILP_INCLUDED == TRUE)
-            bte_main_enable_lpm(TRUE);
+                bte_main_enable_lpm(TRUE);
 #endif
-            btif_fm_state = BTIF_CORE_STATE_ENABLED;
-            HAL_CBACK(fm_hal_cbacks, state_changed_cb, FM_STATE_ON);
+                btif_fm_state = BTIF_CORE_STATE_ENABLED;
+                HAL_CBACK(fm_hal_cbacks, state_changed_cb, FM_STATE_ON);
             }
 #endif
         }
